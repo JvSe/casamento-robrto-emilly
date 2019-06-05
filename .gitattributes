@@ -1,0 +1,4 @@
+*[[:space:]].png filter=lfs diff=lfs merge=lfs -text
+*[[:space:]].mp4 filter=lfs diff=lfs merge=lfs -text
+*[[:space:]].jpeg filter=lfs diff=lfs merge=lfs -text
+*[[:space:]].jpg filter=lfs diff=lfs merge=lfs -text
