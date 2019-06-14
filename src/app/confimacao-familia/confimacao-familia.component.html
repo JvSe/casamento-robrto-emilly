@@ -1,0 +1,522 @@
+<div style="text-align: center">
+<button class="btn btn-primary" (click)="mudarQTD(3)"> 3 integrantes </button>
+<button class="btn btn-primary" (click)="mudarQTD(4)"> 4 integrantes </button>
+<button class="btn btn-primary" (click)="mudarQTD(5)"> 5 integrantes </button>
+<button class="btn btn-primary" (click)="mudarQTD(6)"> 6 integrantes </button>
+</div>
+<div *ngIf="qtd == 3">
+  <div class="container">
+      <form (ngSubmit)="criarConfirmacao(cadastro.value)" #cadastro="ngForm">
+          <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" class="form-control" [(ngModel)]="nome1" required>
+            <small class="form-text text-muted">Coloque seu nome completo.</small>
+          </div>
+
+          <div class="form-group">
+            <label for="nome">Email:</label>
+            <input type="text" id="email" name="email" class="form-control" [(ngModel)]="email" required>
+            <small class="form-text text-muted">Coloque seu email completo.</small>
+          </div>
+
+          <div class="form-group">
+            <label for="idade"> Selecione sua Faixa Etária: </label>
+            <select class="form-control" id="idade" name="idade" required>
+              <option *ngFor="let faixa of faixa_etaria">{{ faixa }}</option>
+            </select>
+            <small class="form-text text-muted">Informe a qual faixa etária você pertence.</small>
+          </div>
+      
+          <div class="form-group">
+            <label for="idade"> Selecione o grupo ao qual você pertence: </label>
+            <select class="form-control" id="idade" name="idade" required>
+              <option *ngFor="let grupo of grupo_pessoa">{{ grupo }}</option>
+            </select>
+            <small class="form-text text-muted">Informe a qual grupo você pertence.</small>
+          </div>
+          
+          <br>
+          <hr>
+          <br>
+
+          <div class="form-group">
+              <label for="nome2">Nome:</label>
+              <input type="text" id="nome2" name="nome2" class="form-control" [(ngModel)]="nome2" required>
+              <small class="form-text text-muted">Coloque seu nome completo.</small>
+          </div>
+
+          <div class="form-group">
+            <label for="idade"> Selecione sua Faixa Etária: </label>
+            <select class="form-control" id="idade" name="idade" required>
+              <option *ngFor="let faixa of faixa_etaria">{{ faixa }}</option>
+            </select>
+            <small class="form-text text-muted">Informe a qual faixa etária você pertence.</small>
+          </div>
+      
+          <div class="form-group">
+            <label for="idade"> Selecione o grupo ao qual você pertence: </label>
+            <select class="form-control" id="idade" name="idade" required>
+              <option *ngFor="let grupo of grupo_pessoa">{{ grupo }}</option>
+            </select>
+          </div>
+
+          <br>
+          <hr>
+          <br>
+
+          <div class="form-group">
+              <label for="nome2">Nome:</label>
+              <input type="text" id="nome2" name="nome2" class="form-control" [(ngModel)]="nome3" required>
+              <small class="form-text text-muted">Coloque seu nome completo.</small>
+          </div>
+
+          <div class="form-group">
+            <label for="idade"> Selecione sua Faixa Etária: </label>
+            <select class="form-control" id="idade" name="idade" required>
+              <option *ngFor="let faixa of faixa_etaria">{{ faixa }}</option>
+            </select>
+            <small class="form-text text-muted">Informe a qual faixa etária você pertence.</small>
+          </div>
+      
+          <div class="form-group">
+            <label for="idade"> Selecione o grupo ao qual você pertence: </label>
+            <select class="form-control" id="idade" name="idade" required>
+              <option *ngFor="let grupo of grupo_pessoa">{{ grupo }}</option>
+            </select>
+            <small class="form-text text-muted">Informe a qual grupo você pertence.</small>
+          </div>
+
+          <div class="form-group">
+              <button type="submit" class="btn btn-outline-secondary" [disabled]="!cadastro.form.valid" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fa fa-save"> Confirmar</i></button>
+          </div>
+      </form>
+  </div>
+</div>
+
+<div *ngIf="qtd == 4">
+    <div class="container">
+        <form (ngSubmit)="criarConfirmacao(cadastro.value)" #cadastro="ngForm">
+            <div class="form-group">
+              <label for="nome">Nome:</label>
+              <input type="text" id="nome" name="nome" class="form-control" [(ngModel)]="nome1" required>
+              <small class="form-text text-muted">Coloque seu nome completo.</small>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="text" id="email" name="email" class="form-control" [(ngModel)]="email" required>
+              <small class="form-text text-muted">Coloque seu email completo.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="idade"> Selecione sua Faixa Etária: </label>
+                <select class="form-control" id="idade" name="idade" required>
+                  <option *ngFor="let faixa of faixa_etaria">{{ faixa }}</option>
+                </select>
+              </div>
+              <small class="form-text text-muted">Informe a qual faixa etária você pertence.</small>
+          
+              <div class="form-group">
+                <label for="idade"> Selecione o grupo ao qual você pertence: </label>
+                <select class="form-control" id="idade" name="idade" required>
+                  <option *ngFor="let grupo of grupo_pessoa">{{ grupo }}</option>
+                </select>
+                <small class="form-text text-muted">Informe a qual grupo você pertence.</small>
+              </div>
+            
+            <br>
+            <hr>
+            <br>
+
+            <div class="form-group">
+                <label for="nome2">Nome:</label>
+                <input type="text" id="nome2" name="nome2" class="form-control" [(ngModel)]="nome2" required>
+                <small class="form-text text-muted">Coloque seu nome completo.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="idade"> Selecione sua Faixa Etária: </label>
+                <select class="form-control" id="idade" name="idade" required>
+                  <option *ngFor="let faixa of faixa_etaria">{{ faixa }}</option>
+                </select>
+                <small class="form-text text-muted">Informe a qual faixa etária você pertence.</small>
+              </div>
+          
+              <div class="form-group">
+                <label for="idade"> Selecione o grupo ao qual você pertence: </label>
+                <select class="form-control" id="idade" name="idade" required>
+                  <option *ngFor="let grupo of grupo_pessoa">{{ grupo }}</option>
+                </select>
+                <small class="form-text text-muted">Informe a qual grupo você pertence.</small>
+              </div>
+              
+            <br>
+            <hr>
+            <br>
+
+            <div class="form-group">
+                <label for="nome2">Nome:</label>
+                <input type="text" id="nome2" name="nome2" class="form-control" [(ngModel)]="nome3" required>
+                <small class="form-text text-muted">Coloque seu nome completo.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="idade"> Selecione sua Faixa Etária: </label>
+                <select class="form-control" id="idade" name="idade" required>
+                  <option *ngFor="let faixa of faixa_etaria">{{ faixa }}</option>
+                </select>
+                <small class="form-text text-muted">Informe a qual faixa etária você pertence.</small>
+              </div>
+          
+              <div class="form-group">
+                <label for="idade"> Selecione o grupo ao qual você pertence: </label>
+                <select class="form-control" id="idade" name="idade" required>
+                  <option *ngFor="let grupo of grupo_pessoa">{{ grupo }}</option>
+                </select>
+                <small class="form-text text-muted">Informe a qual grupo você pertence.</small>
+              </div>
+            
+              <br>
+              <hr>
+              <br>
+
+            <div class="form-group">
+                <label for="nome2">Nome:</label>
+                <input type="text" id="nome2" name="nome2" class="form-control" [(ngModel)]="nome4" required>
+                <small class="form-text text-muted">Coloque seu nome completo.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="idade"> Selecione sua Faixa Etária: </label>
+                <select class="form-control" id="idade" name="idade" required>
+                  <option *ngFor="let faixa of faixa_etaria">{{ faixa }}</option>
+                </select>
+                <small class="form-text text-muted">Informe a qual faixa etária você pertence.</small>
+              </div>
+          
+              <div class="form-group">
+                <label for="idade"> Selecione o grupo ao qual você pertence: </label>
+                <select class="form-control" id="idade" name="idade" required>
+                  <option *ngFor="let grupo of grupo_pessoa">{{ grupo }}</option>
+                </select>
+                <small class="form-text text-muted">Informe a qual grupo você pertence.</small>
+              </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-outline-secondary" [disabled]="!cadastro.form.valid" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fa fa-save"> Confirmar</i></button>
+            </div>
+        </form>
+    </div>
+  </div>
+
+
+<div *ngIf="qtd == 5">
+    <div class="container">
+        <form (ngSubmit)="criarConfirmacao(cadastro.value)" #cadastro="ngForm">
+            <div class="form-group">
+              <label for="nome">Nome:</label>
+              <input type="text" id="nome" name="nome" class="form-control" [(ngModel)]="nome1" required>
+              <small class="form-text text-muted">Coloque seu nome completo.</small>
+            </div>
+
+            <div class="form-group">
+              <label for="nome">Email:</label>
+              <input type="text" id="email" name="email" class="form-control" [(ngModel)]="email" required>
+              <small class="form-text text-muted">Coloque seu email completo.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="idade"> Selecione sua Faixa Etária: </label>
+                <select class="form-control" id="idade" name="idade" required>
+                  <option *ngFor="let faixa of faixa_etaria">{{ faixa }}</option>
+                </select>
+                <small class="form-text text-muted">Informe a qual faixa etária você pertence.</small>
+              </div>
+          
+              <div class="form-group">
+                <label for="idade"> Selecione o grupo ao qual você pertence: </label>
+                <select class="form-control" id="idade" name="idade" required>
+                  <option *ngFor="let grupo of grupo_pessoa">{{ grupo }}</option>
+                </select>
+                <small class="form-text text-muted">Informe a qual grupo você pertence.</small>
+              </div>
+            
+            <br>
+            <hr>
+            <br>
+
+            <div class="form-group">
+                <label for="nome2">Nome:</label>
+                <input type="text" id="nome2" name="nome2" class="form-control" [(ngModel)]="nome2" required>
+                <small class="form-text text-muted">Coloque seu nome completo.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="idade"> Selecione sua Faixa Etária: </label>
+                <select class="form-control" id="idade" name="idade" required>
+                  <option *ngFor="let faixa of faixa_etaria">{{ faixa }}</option>
+                </select>
+                <small class="form-text text-muted">Informe a qual faixa etária você pertence.</small>
+              </div>
+          
+              <div class="form-group">
+                <label for="idade"> Selecione o grupo ao qual você pertence: </label>
+                <select class="form-control" id="idade" name="idade" required>
+                  <option *ngFor="let grupo of grupo_pessoa">{{ grupo }}</option>
+                </select>
+                <small class="form-text text-muted">Informe a qual grupo você pertence.</small>
+              </div>
+              
+              <br>
+              <hr>
+              <br>
+
+            <div class="form-group">
+                <label for="nome2">Nome:</label>
+                <input type="text" id="nome2" name="nome2" class="form-control" [(ngModel)]="nome3" required>
+                <small class="form-text text-muted">Coloque seu nome completo.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="idade"> Selecione sua Faixa Etária: </label>
+                <select class="form-control" id="idade" name="idade" required>
+                  <option *ngFor="let faixa of faixa_etaria">{{ faixa }}</option>
+                </select>
+                <small class="form-text text-muted">Informe a qual faixa etária você pertence.</small>
+              </div>
+          
+              <div class="form-group">
+                <label for="idade"> Selecione o grupo ao qual você pertence: </label>
+                <select class="form-control" id="idade" name="idade" required>
+                  <option *ngFor="let grupo of grupo_pessoa">{{ grupo }}</option>
+                </select>
+                <small class="form-text text-muted">Informe a qual grupo você pertence.</small>
+              </div>
+            
+            <br>
+            <hr>
+            <br>
+
+            <div class="form-group">
+                <label for="nome2">Nome:</label>
+                <input type="text" id="nome2" name="nome2" class="form-control" [(ngModel)]="nome4" required>
+                <small class="form-text text-muted">Coloque seu nome completo.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="idade"> Selecione sua Faixa Etária: </label>
+                <select class="form-control" id="idade" name="idade" required>
+                  <option *ngFor="let faixa of faixa_etaria">{{ faixa }}</option>
+                </select>
+                <small class="form-text text-muted">Informe a qual faixa etária você pertence.</small>
+              </div>
+          
+              <div class="form-group">
+                <label for="idade"> Selecione o grupo ao qual você pertence: </label>
+                <select class="form-control" id="idade" name="idade" required>
+                  <option *ngFor="let grupo of grupo_pessoa">{{ grupo }}</option>
+                </select>
+                <small class="form-text text-muted">Informe a qual grupo você pertence.</small>
+              </div>
+            
+            <br>
+            <hr>
+            <br>
+
+            <div class="form-group">
+                <label for="nome2">Nome:</label>
+                <input type="text" id="nome2" name="nome2" class="form-control" [(ngModel)]="nome5" required>
+                <small class="form-text text-muted">Coloque seu nome completo.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="idade"> Selecione sua Faixa Etária: </label>
+                <select class="form-control" id="idade" name="idade" required>
+                  <option *ngFor="let faixa of faixa_etaria">{{ faixa }}</option>
+                </select>
+                <small class="form-text text-muted">Informe a qual faixa etária você pertence.</small>
+              </div>
+          
+              <div class="form-group">
+                <label for="idade"> Selecione o grupo ao qual você pertence: </label>
+                <select class="form-control" id="idade" name="idade" required>
+                  <option *ngFor="let grupo of grupo_pessoa">{{ grupo }}</option>
+                </select>
+                <small class="form-text text-muted">Informe a qual grupo você pertence.</small>
+              </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-outline-secondary" [disabled]="!cadastro.form.valid" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fa fa-save"> Confirmar</i></button>
+            </div>
+        </form>
+    </div>
+  </div>
+
+
+<div *ngIf="qtd == 6">
+    <div class="container">
+        <form (ngSubmit)="criarConfirmacao(cadastro.value)" #cadastro="ngForm">
+            <div class="form-group">
+              <label for="nome">Nome:</label>
+              <input type="text" id="nome" name="nome" class="form-control" [(ngModel)]="nome1" required>
+              <small class="form-text text-muted">Coloque seu nome completo.</small>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="text" id="email" name="email" class="form-control" [(ngModel)]="email" required>
+              <small class="form-text text-muted">Coloque seu email completo.</small>
+            </div>
+            
+            <div class="form-group">
+                <label for="idade"> Selecione sua Faixa Etária: </label>
+                <select class="form-control" id="idade" name="idade" required>
+                  <option *ngFor="let faixa of faixa_etaria">{{ faixa }}</option>
+                </select>
+                <small class="form-text text-muted">Informe a qual faixa etária você pertence.</small>
+              </div>
+          
+              <div class="form-group">
+                <label for="idade"> Selecione o grupo ao qual você pertence: </label>
+                <select class="form-control" id="idade" name="idade" required>
+                  <option *ngFor="let grupo of grupo_pessoa">{{ grupo }}</option>
+                </select>
+                <small class="form-text text-muted">Informe a qual grupo você pertence.</small>
+              </div>
+            
+            <br>
+            <hr>
+            <br>
+        
+            <div class="form-group">
+                <label for="nome2">Nome:</label>
+                <input type="text" id="nome2" name="nome2" class="form-control" [(ngModel)]="nome2" required>
+                <small class="form-text text-muted">Coloque seu nome completo.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="idade"> Selecione sua Faixa Etária: </label>
+                <select class="form-control" id="idade" name="idade" required>
+                  <option *ngFor="let faixa of faixa_etaria">{{ faixa }}</option>
+                </select>
+                <small class="form-text text-muted">Informe a qual faixa etária você pertence.</small>
+              </div>
+          
+              <div class="form-group">
+                <label for="idade"> Selecione o grupo ao qual você pertence: </label>
+                <select class="form-control" id="idade" name="idade" required>
+                  <option *ngFor="let grupo of grupo_pessoa">{{ grupo }}</option>
+                </select>
+                <small class="form-text text-muted">Informe a qual grupo você pertence.</small>
+              </div>
+              
+            <br>
+            <hr>
+            <br>
+        
+            <div class="form-group">
+                <label for="nome2">Nome:</label>
+                <input type="text" id="nome2" name="nome2" class="form-control" [(ngModel)]="nome3" required>
+                <small class="form-text text-muted">Coloque seu nome completo.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="idade"> Selecione sua Faixa Etária: </label>
+                <select class="form-control" id="idade" name="idade" required>
+                  <option *ngFor="let faixa of faixa_etaria">{{ faixa }}</option>
+                </select>
+                <small class="form-text text-muted">Informe a qual faixa etária você pertence.</small>
+              </div>
+          
+              <div class="form-group">
+                <label for="idade"> Selecione o grupo ao qual você pertence: </label>
+                <select class="form-control" id="idade" name="idade" required>
+                  <option *ngFor="let grupo of grupo_pessoa">{{ grupo }}</option>
+                </select>
+                <small class="form-text text-muted">Informe a qual grupo você pertence.</small>
+              </div>
+            
+            <br>
+            <hr>
+            <br>
+            
+            <div class="form-group">
+                <label for="nome2">Nome:</label>
+                <input type="text" id="nome2" name="nome2" class="form-control" [(ngModel)]="nome4" required>
+                <small class="form-text text-muted">Coloque seu nome completo.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="idade"> Selecione sua Faixa Etária: </label>
+                <select class="form-control" id="idade" name="idade" required>
+                  <option *ngFor="let faixa of faixa_etaria">{{ faixa }}</option>
+                </select>
+                <small class="form-text text-muted">Informe a qual faixa etária você pertence.</small>
+              </div>
+          
+              <div class="form-group">
+                <label for="idade"> Selecione o grupo ao qual você pertence: </label>
+                <select class="form-control" id="idade" name="idade" required>
+                  <option *ngFor="let grupo of grupo_pessoa">{{ grupo }}</option>
+                </select>
+                <small class="form-text text-muted">Informe a qual grupo você pertence.</small>
+              </div>
+
+            <br>
+            <hr>
+            <br>
+      
+            <div class="form-group">
+                <label for="nome2">Nome:</label>
+                <input type="text" id="nome2" name="nome2" class="form-control" [(ngModel)]="nome5" required>
+                <small class="form-text text-muted">Coloque seu nome completo.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="idade"> Selecione sua Faixa Etária: </label>
+                <select class="form-control" id="idade" name="idade" required>
+                  <option *ngFor="let faixa of faixa_etaria">{{ faixa }}</option>
+                </select>
+                <small class="form-text text-muted">Informe a qual faixa etária você pertence.</small>
+              </div>
+          
+              <div class="form-group">
+                <label for="idade"> Selecione o grupo ao qual você pertence: </label>
+                <select class="form-control" id="idade" name="idade" required>
+                  <option *ngFor="let grupo of grupo_pessoa">{{ grupo }}</option>
+                </select>
+                <small class="form-text text-muted">Informe a qual grupo você pertence.</small>
+              </div>
+            
+            <br>
+            <hr>
+            <br>
+            
+            <div class="form-group">
+                <label for="nome2">Nome:</label>
+                <input type="text" id="nome2" name="nome2" class="form-control" [(ngModel)]="nome6" required>
+                <small class="form-text text-muted">Coloque seu nome completo.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="idade"> Selecione sua Faixa Etária: </label>
+                <select class="form-control" id="idade" name="idade" required>
+                  <option *ngFor="let faixa of faixa_etaria">{{ faixa }}</option>
+                </select>
+                <small class="form-text text-muted">Informe a qual faixa etária você pertence.</small>
+              </div>
+          
+              <div class="form-group">
+                <label for="idade"> Selecione o grupo ao qual você pertence: </label>
+                <select class="form-control" id="idade" name="idade" required>
+                  <option *ngFor="let grupo of grupo_pessoa">{{ grupo }}</option>
+                </select>
+                <small class="form-text text-muted">Informe a qual grupo você pertence.</small>
+              </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-outline-secondary" [disabled]="!cadastro.form.valid" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fa fa-save"> Confirmar</i></button>
+            </div>
+        </form>
+    </div>
+  </div>

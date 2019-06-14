@@ -1,0 +1,71 @@
+.imagemDeFundo{
+    background: url('src/assets/background.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.grow:hover
+{
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.sombras:hover
+{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.8s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.right {
+    float: right;
+}
+
+.right-01 {
+    padding: 10px;
+    padding-top: 25px;
+    float: right;
+}
+
+.left-01 {
+    padding: 10px;
+    padding-top: 25px;
+}
+
+span {
+    font-size: 40px;
+    color: black;
+}
+
+.padding {
+    padding: 10px;
+}
+
+.posicao {
+    position: fixed;
+}
+
+@font-face {
+    font-family: adam;
+    src: url(/assets/Adam.otf) format("truetype");
+}
+
+.font-new {
+    font-family: adam;
+}
+
+.zoom {
+	overflow: hidden;
+}
+
+.zoom img {
+	max-width: 100%;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.zoom:hover img {
+	-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
